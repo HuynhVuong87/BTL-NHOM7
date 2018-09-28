@@ -1,0 +1,69 @@
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <LINK REL="SHORTCUT ICON" HREF="./images/browser.png">
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lib/noty/css/noty.css">   
+    <title>Hello, world!</title>
+
+</head>
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <div class="dropdown">
+                        <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ex1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons" style="color:#fff">menu</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item disabled" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a href="../INT3305/index.html">
+                <img height="45px" src="./images/crop.png" alt="">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <div ng-view></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script src="lib/noty/js/noty.min.js"></script>
+    <script src="index.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/component/home/homeController.js""></script>    
+</body>
+
+</html>

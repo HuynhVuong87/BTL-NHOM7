@@ -1,0 +1,65 @@
+body {
+    background: url('./images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, .54) !important
+}
+
+.container {
+    width: -moz-fit-content;
+}
+
+div.main {
+    margin: 30px auto;
+    /* position: absolute; */
+    /* top: 18px; */
+    display: block;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0px 16px 40px 30px rgb(0, 0, 0);
+    /* bottom: 0; */
+    /* right: 0; */
+}
+
+.image {
+    position: relative;
+}
+
+.image .close {
+    position: absolute;
+    top: -11px;
+    right: -9px;
+    z-index: 100;
+    background: #ffffff;
+    padding: 0px 5px 1px 6px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.uploadForm {
+    width: 990px;
+    padding: 15px
+}
+
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+}
+
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
