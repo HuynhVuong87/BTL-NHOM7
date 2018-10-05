@@ -1,21 +1,37 @@
-<div class="panel panel-default">
+<div class="panel panel-default" >
     <div class="panel-body uploadForm" ng-show="!uploaded">
         <form id="js-upload-form">
             <div class="upload-drop-zone" id="drop-zone">
                 KÉO THẢ HÌNH ẢNH VÀO ĐÂY or
-                <button class="btn btn-outline-primary" ng-click="uploadHandle()">UPLOAD IMAGE</button>
+                <button class="btn btn-outline-primary" ng-click="uploadHandle()">UPLOAD IMAGE</button> or
+                <input type="text" name="" placeholder="Dán url hình ảnh" id="pasteUrl">
                 <input style="display:none" type="file" name="files[]" id="js-upload-files" accept="image/*"></input>
+
             </div>
         </form>
-        <div class="progress" >
+        <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0"
                 aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
         </div>
     </div>
     <div class="panel-body" ng-show="uploaded">
         <div class="image">
-            <span class="close" ng-click="uploaded = false">&times;</span>
-            <img src="{{linkImage}}" alt="" width="100%" max-width="100%" srcset=""></img>
+            <span class="close" ng-click="uploaded = false;linkImage=''">&times;</span>
+            <div>
+                <img id="imgPre" src="{{linkImage}}" alt="" style="display: none" width="100%" max-width="100%" srcset=""></img>
+                <canvas id="canvas" ></canvas>
+            </div>
+
+        </div>
+        <div style="display: inline;position: fixed; top: 90px;right: 0px;z-index: 999;" ng-controller="editorController">
+            <div class="panel-body">
+                <ul class="editButton">
+                    <li>
+                        <button class="btn btn-primary" ng-click="rotate()">rotate</button>
+                    </li>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

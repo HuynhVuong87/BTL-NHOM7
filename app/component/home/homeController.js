@@ -4,7 +4,7 @@ app.controller("homeController", function ($scope) {
 
     var n = {
         layout: 'topRight',
-        progressBar:true,
+        progressBar: true,
         theme: 'relax',
         type: 'success',
         closeWith: ['button']
@@ -14,10 +14,50 @@ app.controller("homeController", function ($scope) {
 
     $scope.uploaded = false
 
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var image = document.getElementById("imgPre")
+
+    function loadImg() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        image.onload = function () {
+
+            $('canvas').attr("width", this.width)
+            $('canvas').attr("height", this.height)
+            ctx.drawImage(image, 0, 0)
+
+            // ctx.drawImage(image, 0, 0, image.width, image.height, // source rectangle
+            //     0, 0, cw, ch);
+        }
+        // image.src = url;
+    }
+    document.addEventListener('paste', function (e) {
+        if ($("input#pasteUrl").is(":focus")) {
+
+
+            noty ? noty.close() : ""
+            setTimeout(() => {
+                var pastedText = $("input#pasteUrl").val();
+                console.log(pastedText);
+                loadImg();
+                $scope.uploaded = true;
+                $scope.linkImage = pastedText;
+                $scope.$apply();
+                n.text = pastedText
+                noty = new Noty(n).show();
+                $("input#pasteUrl").val("");
+            }, 500)
+
+                
+
+        }
+    })
     var startUpload = function (file) {
 
-        noty? noty.close():
-        $scope.$apply()
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        noty ? noty.close() :""            
         console.log(file);
 
         var pro = 0
@@ -30,7 +70,7 @@ app.controller("homeController", function ($scope) {
                 clearInterval(timer);
             }
 
-        }, 100)
+        }, 60)
 
         var settings = {
             // async: false,
@@ -56,11 +96,19 @@ app.controller("homeController", function ($scope) {
             console.log(obj.data);
             pro = 100
             $('div.progress-bar').attr('aria-valuenow', 100).css('width', "100%");
-            $scope.linkImage = obj.data.link
-            $scope.uploaded = true
-            $scope.$apply()
-            n.text = obj.data.link
-            noty = new Noty(n).show()           
+            
+            var promise = new Promise(function (resolve, reject) {
+                loadImg()
+                resolve()
+            })
+            promise.then(() => {
+                $scope.linkImage = obj.data.link
+                $scope.uploaded = true
+                $scope.$apply()
+                n.text =obj.data.link
+                noty = new Noty(n).show()
+            })
+
         });
 
     }
