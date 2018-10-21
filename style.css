@@ -1,115 +1,123 @@
 body {
-    background: url('./images/bg.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+  background: url('./images/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, .54) !important
+  background-color: rgba(0, 0, 0, .54) !important
 }
 
 .container {
-    width: -moz-fit-content;
+  width: -moz-fit-content;
 }
 
 ul.editButton {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 input#pasteUrl {
-    line-height: 23px;
-    padding: 8px 5px 5px 5px;
-    border: #21ad2dcc solid 1px;
-    border-radius: 2px
+  line-height: 23px;
+  padding: 8px 5px 5px 5px;
+  border: #21ad2dcc solid 1px;
+  border-radius: 2px
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
-    background-color: #F5F5F5;
+  width: 6px;
+  background-color: #F5F5F5;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 div.main {
-    margin: 30px auto;
-    /* position: absolute; */
-    /* top: 18px; */
-    display: block;
-    box-shadow: 0px 18px 40px 20px rgb(0, 0, 0)
-        /* bottom: 0; */
-        /* right: 0; */
+  margin: 30px auto;
+  /* position: absolute; */
+  /* top: 18px; */
+  display: block;
+  box-shadow: 0px 18px 40px 20px rgb(0, 0, 0)
+    /* bottom: 0; */
+    /* right: 0; */
 }
 
 .image {
-    position: relative;
+  position: relative;
 }
 
 .image .close {
-    position: absolute;
-    top: -11px;
-    right: -9px;
-    z-index: 100;
-    background: #ffffff;
-    padding: 0px 5px 1px 6px;
-    border-radius: 50%;
-    opacity: 1;
+  position: absolute;
+  top: -11px;
+  right: -9px;
+  z-index: 100;
+  background: #ffffff;
+  padding: 0px 5px 1px 6px;
+  border-radius: 50%;
+  opacity: 1;
 }
 
 .noty_copy_button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .noty_copy_button {
-    position: absolute;
-    top: 2px;
-    right: 25px;
-    font-weight: bold;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 2px;
-    cursor: pointer;
-    -webkit-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-    font-size: 12px;
-    padding: 0px 5px;
+  position: absolute;
+  top: 2px;
+  right: 25px;
+  font-weight: bold;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  font-size: 12px;
+  padding: 0px 5px;
 }
 
 canvas {
-    margin: 10px;
+  margin: 10px;
 }
 
 .uploadForm {
-    width: 990px;
-    padding: 15px;
-    border-radius: 4px;
-    background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  background: #fff;
 }
 
 .upload-drop-zone {
-    height: 200px;
-    border-width: 2px;
-    margin-bottom: 20px;
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
 }
 
 /* skin.css Style*/
 .upload-drop-zone {
-    color: #ccc;
-    border-style: dashed;
-    border-color: #ccc;
-    line-height: 200px;
-    text-align: center
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center;
+  padding: 0 30px;
 }
 
 .upload-drop-zone.drop {
-    color: #222;
-    border-color: #222;
+  color: #222;
+  border-color: #222;
+}
+
+div#resize .modal-dialog {
+  margin: unset;
+  right: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 325px;
 }
