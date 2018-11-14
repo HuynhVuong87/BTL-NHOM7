@@ -31,6 +31,8 @@ app.controller("homeController", function($scope) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     image.onload = function() {
 
+      ctx.filter = "grayscale(50%)";
+
       if (this.width > 1200) {
         alert("kích thước ảnh quá lớn(>1200px)")
         $('canvas').css("display", "none")

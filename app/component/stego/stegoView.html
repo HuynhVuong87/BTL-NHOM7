@@ -1,0 +1,30 @@
+<div class="stego">
+    <div class="contain">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="encode">
+                    <h2>Giấu Tin Vào Ảnh</h2>
+                    <input type="text" id="message" placeholder="Nhập đoạn tin bạn cần giấu...">
+                    </br>
+                    <h5>Chọn hình ảnh bạn muốn giấu:</h5>
+                    <input type="file" id="imageLoader" name="imageLoader" />
+                    <img id="imgPre" src="{{linkImage}}" alt=""  width="100%" max-width="100%" style="display:none" srcset=""
+                        crossOrigin="Anonymous"></img>
+                     <canvas id="imageCanvas"></canvas> 
+                    <canvas id="textCanvas" style="display:none"></canvas> 
+
+                </div>
+
+            </div>
+            <div class="col-md-6" style="border-left: #ccc dashed 2px;">
+                <div class="decode">
+                    <h2>Đọc Tin Trong Ảnh</h2>
+                    <h5>Chọn hình ảnh bạn muốn đọc tin:</h5>
+                    <input type="file" id="imageLoader2" name="imageLoader2" />
+                    <canvas id="imageCanvas2"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

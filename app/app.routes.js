@@ -1,16 +1,12 @@
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "app/component/home/home.html",
         controller : "homeController",
     })
-    .when("/red", {
-        templateUrl : "red.htm"
+    .when("/stego", {
+        templateUrl : "app/component/stego/stegoView.html",
+        controller : "stegoController"
     })
-    .when("/green", {
-        templateUrl : "green.htm"
-    })
-    .when("/blue", {
-        templateUrl : "blue.htm"
-    });
+    $locationProvider.html5Mode(false);
 });

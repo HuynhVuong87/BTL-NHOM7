@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lib/noty/css/noty.css">   
     <title>Hello, world!</title>
+    <base href="/">
 
 </head>
 
@@ -26,16 +27,15 @@
                             <i class="material-icons" style="color:#fff">menu</i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
-                            <button class="dropdown-item" type="button">Action</button>
-                            <button class="dropdown-item disabled" type="button">Another action</button>
-                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button"><a href="/#!/">HOME</a></button>
+                            <button class="dropdown-item" type="button"><a href="/#!/stego">GIẤU TIN</a></button>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="mx-auto order-0">
-            <a href="../INT3305/index.html">
+            <a href="/#!/">
                 <img height="45px" src="./images/crop.png" alt="">
             </a>
         </div>
@@ -63,6 +63,7 @@
     <script src="app/app.routes.js"></script>
     <script src="app/component/home/homeController.js""></script>    
     <script src="app/component/home/editorController.js"></script> 
+    <script src="app/component/stego/stegoController.js"></script> 
 </body>
 
 </html>
